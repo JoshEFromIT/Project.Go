@@ -1,0 +1,15 @@
+﻿<!-- Button.razor -->
+@inherits Microsoft.AspNetCore.Components.ComponentBase
+
+<button class="@ButtonClass" @onclick="OnClick">@ButtonText</button>
+
+@code {
+    [Parameter]
+    public string ButtonText { get; set; }
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+
+    [Parameter]
+    public string ButtonClass { get; set; } = "btn-primary";
+}

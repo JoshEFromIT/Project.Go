@@ -1,0 +1,23 @@
+﻿@page "/"
+@using Project.Go.Components
+
+<PageTitle>Index</PageTitle>
+
+<div class="dotted-circle"><h2>Project.Go</h2></div>
+
+    <div class="button-container">
+        <ButtonLarge ButtonClass="ind-btn-large" ButtonText="Current Projects" OnClick="@HandleClick"></ButtonLarge>
+        <ButtonLarge ButtonClass="ind-btn-large" ButtonText="New Project" OnClick="@HandleClick"></ButtonLarge>
+        <ButtonLarge ButtonClass="ind-btn-large" ButtonText="Ask AI" OnClick="@HandleClick"></ButtonLarge>
+    </div>
+
+
+
+@code {
+    private string buttonClicked = "No";
+
+    private void HandleClick()
+    {
+        buttonClicked = "Yes";
+    }
+}
